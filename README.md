@@ -26,7 +26,7 @@
 ```bash
 git clone git@github.com:daevv/frontend-project-44.git brain-games
 cd brain-games
-make
+make publish
 npm link
 ```
 
