@@ -6,3 +6,5 @@
 Brain-even demo: https://asciinema.org/a/KMuMzM5jPunTkPmwFSs8z368A
 
 Brain-calc demo: https://asciinema.org/a/mTrB0lWqZ2tU61Gfv3BKAnvR8
+
+Brain-gcd demo: https://asciinema.org/a/TLCc76GP6mKPeThBLWPV6dBU8
