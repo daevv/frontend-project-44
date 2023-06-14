@@ -3,4 +3,5 @@ export default {
   CALC_GAME: 'calcGame',
   GCD_GAME: 'gcdGame',
   PROGRESSION_GAME: 'progressionGame',
+  PRIME_GAME: 'primeGame',
 };
