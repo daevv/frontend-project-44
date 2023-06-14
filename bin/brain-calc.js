@@ -2,4 +2,4 @@
 import startGame from '../src/index.js';
 import GameType from '../src/const.js';
 
-startGame(GameType.EVEN_GAME);
+startGame(GameType.CALC_GAME);
