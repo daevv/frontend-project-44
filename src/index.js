@@ -35,7 +35,7 @@ const playWithUser = (name, gameType) => {
 
   while (numberOfCorrectAnswers < CORRECT_ANSWERS_TO_WIN) {
     const [question, correctAnswer] = GameQuestion[gameType]();
-    console.log(`Question: ${Number(question)}`);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (String(userAnswer) === correctAnswer) {
       console.log('Correct!');
