@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 const CORRECT_ANSWERS_TO_WIN = 3;
 
 const sayGoodbyeToUser = (isWin, name) => {
-  const finalText = (isWin) ? `Congratulations, ${name}!` : `Let's try agains, ${name}!`;
+  const finalText = (isWin) ? `Congratulations, ${name}!` : `Let's try again, ${name}!`;
   console.log(finalText);
 };
 
