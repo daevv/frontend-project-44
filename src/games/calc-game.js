@@ -1,7 +1,10 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { evaluate } from 'mathjs';
+import playGame from '../index.js';
 
-export default () => {
+const calcGameGreeting = 'What is the result of the expression?';
+
+const getQAForCalcGame = () => {
   const a = Math.floor(Math.random() * 100);
   const b = Math.floor(Math.random() * 100);
   const signs = ['+', '-', '*'];
@@ -10,3 +13,5 @@ export default () => {
   const answer = String(evaluate(question));
   return [question, answer];
 };
+
+export default () => playGame(calcGameGreeting, getQAForCalcGame);

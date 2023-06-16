@@ -1,4 +1,8 @@
-export default () => {
+import playGame from '../index.js';
+
+const progressionGameGreeting = 'What number is missing in the progression?';
+
+const getQAForPregressionGame = () => {
   let answer;
   const progressionLength = Math.floor(Math.random() * 6) + 5;
   const firstProgressionElement = Math.floor(Math.random() * 1000);
@@ -18,3 +22,5 @@ export default () => {
 
   return [progressionList.join(' '), answer];
 };
+
+export default () => playGame(progressionGameGreeting, getQAForPregressionGame);

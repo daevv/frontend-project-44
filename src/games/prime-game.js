@@ -1,4 +1,8 @@
-export default () => {
+import playGame from '../index.js';
+
+const primeGameGreeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const getQAForPrimeGame = () => {
   const question = Math.floor(Math.random() * 1001);
   let answer = 'yes';
 
@@ -14,3 +18,5 @@ export default () => {
   }
   return [question, answer];
 };
+
+export default () => playGame(primeGameGreeting, getQAForPrimeGame);
