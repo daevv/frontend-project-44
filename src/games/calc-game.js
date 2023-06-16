@@ -1,8 +1,19 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { evaluate } from 'mathjs';
 import playGame from '../index.js';
 
 const calcGameGreeting = 'What is the result of the expression?';
+
+const calculateValue = (a, b, sign) => {
+  switch (sign) {
+    case '+':
+      return a + b;
+    case '-':
+      return a - b;
+    case '*':
+      return a * b;
+    default:
+      return a + b;
+  }
+};
 
 const getQAForCalcGame = () => {
   const a = Math.floor(Math.random() * 100);
@@ -10,7 +21,7 @@ const getQAForCalcGame = () => {
   const signs = ['+', '-', '*'];
   const sign = signs[Math.floor(Math.random() * signs.length)];
   const question = `${a} ${sign} ${b}`;
-  const answer = String(evaluate(question));
+  const answer = String(calculateValue(a, b, sign));
   return [question, answer];
 };
 
