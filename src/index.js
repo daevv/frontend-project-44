@@ -1,16 +1,15 @@
 import readlineSync from 'readline-sync';
 
-const CORRECT_ANSWERS_TO_WIN = 3;
-
-const sayGoodbyeToUser = (isWin, name) => {
-  const finalText = (isWin) ? `Congratulations, ${name}!` : `Let's try again, ${name}!`;
-  console.log(finalText);
-};
-
-const playWithUser = (name, getQAForGame) => {
+export default (gameGreeting, getQAForGame) => {
+  const correctAnswersToWin = 3;
   let numberOfCorrectAnswers = 0;
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
 
-  while (numberOfCorrectAnswers < CORRECT_ANSWERS_TO_WIN) {
+  console.log(`Hello, ${name}!`);
+  console.log(gameGreeting);
+
+  while (numberOfCorrectAnswers < correctAnswersToWin) {
     const [question, correctAnswer] = getQAForGame();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
@@ -19,16 +18,10 @@ const playWithUser = (name, getQAForGame) => {
       numberOfCorrectAnswers += 1;
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      break;
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
   }
-  sayGoodbyeToUser(numberOfCorrectAnswers === CORRECT_ANSWERS_TO_WIN, name);
-};
 
-export default (gameGreeting, getQAForGame) => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  console.log(gameGreeting);
-  playWithUser(name, getQAForGame);
+  console.log(`Congratulations, ${name}!`);
 };

@@ -1,4 +1,5 @@
 import playGame from '../index.js';
+import getRandomNumberBelowValue from '../utils.js';
 
 const calcGameGreeting = 'What is the result of the expression?';
 
@@ -11,15 +12,15 @@ const calculateValue = (a, b, sign) => {
     case '*':
       return a * b;
     default:
-      return a + b;
+      throw new Error(`Unknown sign: '${sign}'!`);
   }
 };
 
 const getQAForCalcGame = () => {
-  const a = Math.floor(Math.random() * 100);
-  const b = Math.floor(Math.random() * 100);
+  const a = getRandomNumberBelowValue(101);
+  const b = getRandomNumberBelowValue(101);
   const signs = ['+', '-', '*'];
-  const sign = signs[Math.floor(Math.random() * signs.length)];
+  const sign = signs[getRandomNumberBelowValue(signs.length)];
   const question = `${a} ${sign} ${b}`;
   const answer = String(calculateValue(a, b, sign));
   return [question, answer];
