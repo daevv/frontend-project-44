@@ -37,7 +37,7 @@ npm link
 ```bash
 brain-even
 ```
-Brain-even demo: https://asciinema.org/a/KMuMzM5jPunTkPmwFSs8z368A
+[![asciicast](https://asciinema.org/a/KMuMzM5jPunTkPmwFSs8z368A.svg)](https://asciinema.org/a/KMuMzM5jPunTkPmwFSs8z368A)
 
 ## Игра "Калькулятор"
 
@@ -46,7 +46,7 @@ Brain-even demo: https://asciinema.org/a/KMuMzM5jPunTkPmwFSs8z368A
 ```bash
 brain-calc
 ```
-Brain-calc demo: https://asciinema.org/a/mTrB0lWqZ2tU61Gfv3BKAnvR8
+[![asciicast](https://asciinema.org/a/mTrB0lWqZ2tU61Gfv3BKAnvR8.svg)](https://asciinema.org/a/mTrB0lWqZ2tU61Gfv3BKAnvR8)
 
 ## Игра "Наибольший общий делитель"
 
@@ -55,7 +55,7 @@ Brain-calc demo: https://asciinema.org/a/mTrB0lWqZ2tU61Gfv3BKAnvR8
 ```bash
 brain-gcd
 ```
-Brain-gcd demo: https://asciinema.org/a/TLCc76GP6mKPeThBLWPV6dBU8
+[![asciicast](https://asciinema.org/a/TLCc76GP6mKPeThBLWPV6dBU8.svg)](https://asciinema.org/a/TLCc76GP6mKPeThBLWPV6dBU8)
 
 ## Игра "Арифметическая прогрессия"
 
@@ -65,7 +65,7 @@ Brain-gcd demo: https://asciinema.org/a/TLCc76GP6mKPeThBLWPV6dBU8
 brain-progression
 ```
 
-Brain-progression demo: https://asciinema.org/a/z6fvVNdIDm9GnOWwE4eVCZkS7
+[![asciicast](https://asciinema.org/a/z6fvVNdIDm9GnOWwE4eVCZkS7.svg)](https://asciinema.org/a/z6fvVNdIDm9GnOWwE4eVCZkS7)
 
 ## Игра "Простое ли число?"
 
@@ -74,4 +74,4 @@ Brain-progression demo: https://asciinema.org/a/z6fvVNdIDm9GnOWwE4eVCZkS7
 ```bash
 brain-prime
 ```
-Brain-prime demo: https://asciinema.org/a/7GXcusa2fZXKCfHnkq0R5XmQ6
+[![asciicast](https://asciinema.org/a/7GXcusa2fZXKCfHnkq0R5XmQ6.svg)](https://asciinema.org/a/7GXcusa2fZXKCfHnkq0R5XmQ6)
