@@ -3,7 +3,7 @@ import getRandomNumberInRange from '../utils.js';
 
 const gcdGameRules = 'Find the greatest common divisor of given numbers.';
 
-const getGCD = (a, b) => (b ? gcdGameRules(b, a % b) : a);
+const getGCD = (a, b) => (b ? getGCD(b, a % b) : a);
 
 const getDataForGCDGameRound = () => {
   const a = getRandomNumberInRange(101, 1);
