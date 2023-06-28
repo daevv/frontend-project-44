@@ -1,14 +1,14 @@
 import playGame from '../index.js';
-import getRandomNumberBelowValue from '../utils.js';
+import getRandomNumberInRange from '../utils.js';
 
-const evenGameGreeting = 'Answer "yes" if the number is even, otherwise answer "no".';
+const evenGameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (number) => number % 2 === 0;
 
-const getQAForEvenGame = () => {
-  const question = getRandomNumberBelowValue(101);
+const getDataForEvenGameRound = () => {
+  const question = getRandomNumberInRange(101);
   const answer = (isEven(question)) ? 'yes' : 'no';
   return [question, answer];
 };
 
-export default () => playGame(evenGameGreeting, getQAForEvenGame);
+export default () => playGame(evenGameRules, getDataForEvenGameRound);

@@ -1,13 +1,14 @@
 import playGame from '../index.js';
-import getRandomNumberBelowValue from '../utils.js';
+import getRandomNumberInRange from '../utils.js';
 
-const progressionGameGreeting = 'What number is missing in the progression?';
+const progressionGameRules = 'What number is missing in the progression?';
+const progressionLength = getRandomNumberInRange(11, 5);
 
-const getProgressionWithEmptySlot = (firstElement, d, length, unknownElementIndex) => {
+const getQuestionForGameRound = (firstElement, step, unknownElementIndex) => {
   const progressionList = [];
 
-  for (let i = 1; i <= length; i += 1) {
-    const currentElement = firstElement + (i - 1) * d;
+  for (let i = 0; i < progressionLength; i += 1) {
+    const currentElement = firstElement + i * step;
     if (i === unknownElementIndex) {
       progressionList.push('..');
     } else {
@@ -15,18 +16,16 @@ const getProgressionWithEmptySlot = (firstElement, d, length, unknownElementInde
     }
   }
 
-  return progressionList;
+  return progressionList.join(' ');
 };
 
-const getQAForPregressionGame = () => {
-  const progressionLength = Math.floor(Math.random() * 6) + 5;
-  const firstProgressionElement = getRandomNumberBelowValue(1001);
-  const d = getRandomNumberBelowValue(101);
-  const unknownElementIndex = getRandomNumberBelowValue(progressionLength) + 1;
-  const answer = String(firstProgressionElement + (unknownElementIndex - 1) * d);
-  const question = getProgressionWithEmptySlot(firstProgressionElement, d, progressionLength, unknownElementIndex).join(' ');
-
+const getDataForProgressionGameRound = () => {
+  const firstElement = getRandomNumberInRange(1001);
+  const step = getRandomNumberInRange(101);
+  const unknownElementIndex = getRandomNumberInRange(progressionLength + 1);
+  const question = getQuestionForGameRound(firstElement, step, unknownElementIndex);
+  const answer = String(firstElement + unknownElementIndex * step);
   return [question, answer];
 };
 
-export default () => playGame(progressionGameGreeting, getQAForPregressionGame);
+export default () => playGame(progressionGameRules, getDataForProgressionGameRound);

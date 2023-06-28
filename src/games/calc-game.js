@@ -1,7 +1,7 @@
 import playGame from '../index.js';
-import getRandomNumberBelowValue from '../utils.js';
+import getRandomNumberInRange from '../utils.js';
 
-const calcGameGreeting = 'What is the result of the expression?';
+const calcGameRules = 'What is the result of the expression?';
 
 const calculateValue = (a, b, sign) => {
   switch (sign) {
@@ -16,14 +16,14 @@ const calculateValue = (a, b, sign) => {
   }
 };
 
-const getQAForCalcGame = () => {
-  const a = getRandomNumberBelowValue(101);
-  const b = getRandomNumberBelowValue(101);
+const getDataForCalcGameRound = () => {
+  const a = getRandomNumberInRange(101);
+  const b = getRandomNumberInRange(101);
   const signs = ['+', '-', '*'];
-  const sign = signs[getRandomNumberBelowValue(signs.length)];
+  const sign = signs[getRandomNumberInRange(signs.length)];
   const question = `${a} ${sign} ${b}`;
   const answer = String(calculateValue(a, b, sign));
   return [question, answer];
 };
 
-export default () => playGame(calcGameGreeting, getQAForCalcGame);
+export default () => playGame(calcGameRules, getDataForCalcGameRound);
