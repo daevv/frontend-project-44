@@ -22,7 +22,7 @@ const getQuestionForGameRound = (firstElement, step, unknownElementIndex) => {
 const getDataForProgressionGameRound = () => {
   const firstElement = getRandomNumberInRange(1001);
   const step = getRandomNumberInRange(101);
-  const unknownElementIndex = getRandomNumberInRange(progressionLength + 1);
+  const unknownElementIndex = getRandomNumberInRange(progressionLength);
   const question = getQuestionForGameRound(firstElement, step, unknownElementIndex);
   const answer = String(firstElement + unknownElementIndex * step);
   return [question, answer];
